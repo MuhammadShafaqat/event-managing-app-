@@ -1,0 +1,16 @@
+<form (ngSubmit)="onSubmit()" *ngIf="event">
+    <label for="name">Event Name</label>
+    <input type="text" id="name" [(ngModel)]="event.name" name="name" required>
+  
+    <label for="date">Date and Time</label>
+    <input type="datetime-local" id="date" [(ngModel)]="event.date" name="date" required>
+  
+    <label for="location">Location</label>
+    <input type="text" id="location" [(ngModel)]="event.location" name="location" required>
+  
+    <label for="description">Description</label>
+    <textarea id="description" [(ngModel)]="event.description" name="description"></textarea>
+  
+    <button type="submit">{{ isEditMode ? 'Update' : 'Add' }} Event</button>
+  </form>
+  
